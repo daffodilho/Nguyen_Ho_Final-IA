@@ -1,3 +1,8 @@
+.hidden
+{
+	display: none;
+}
+
 body
 {
     font-family: 'Didot', serif;
@@ -123,7 +128,9 @@ main
 /***MASTHEAD***/
 #masthead
 {
-	margin-bottom: 80px;
+	position: relative;
+	top: -60px;
+	margin-bottom: 40px;
 }
 
 #slider
@@ -176,15 +183,20 @@ main
 	text-decoration: none;
 }*/
 
+#hero-text
+{
+	position: relative;
+	top: 250px;
+	left: 50px;
+	z-index: 2;
+}
+
 #hero-text h1
 {
 	color: whitesmoke;
 	line-height: 20px;
-	
-	position: absolute;
-	top: 450px;
-	left: 200px;
 }
+
 
 /***UPCOMING EVENTS***/
 #upcoming
@@ -262,9 +274,9 @@ main
 
 #previous
 {
-	position: absolute;
-	top: 760px;
-	left: 262px;
+	position: relative;
+	top: -350px;
+	left: 114px;
 	border: none;
 	padding: 10px;
 	margin: 0;
@@ -274,9 +286,9 @@ main
 
 #next
 {
-	position: absolute;
-	top: 760px;
-	left: 1100px;
+	position: relative;
+	top: -350px;
+	left: 906px;
 	border: none;
 	padding: 10px;
 	margin: 0;
