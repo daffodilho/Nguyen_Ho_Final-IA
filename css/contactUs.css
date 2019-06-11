@@ -1,0 +1,300 @@
+body
+{
+    font-family: 'Didot', sans-serif;
+	font-size: 18px;
+	background-color: #f2f2f2;
+}
+
+main
+{
+    width: 1024px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
+/***HEADER***/
+#main-head
+{
+	width: 1024px;
+	height: 124px;
+    display: flex;
+    flex-direction: row;
+	background-color: #4D6064;
+}
+
+#logo
+{
+    width: 105px;
+    position: relative;
+    top: 12px;
+	left: 50px;
+}
+
+#main-nav
+{
+    width: 910px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#main-social
+{
+	position: relative;
+	top: 24px;
+	right: 50px;
+}
+
+#main-social object
+{
+	padding-right: 10px;
+	transition: all 0.5s;
+}
+
+#main-social object svg path:hover
+{
+	fill: #FDD590;
+}
+
+#main-nav ul
+{
+    display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	padding-right: 22px;
+	position: relative;
+	top: 50px;
+}
+
+#main-nav ul li a
+{
+	font-size: 1em;
+    color: #f0f0f0;
+	margin-right: 38px;
+	transition: all 0.5s;
+}
+
+#main-nav ul li a:hover
+{
+	color: #FFD590;
+}
+
+/***IMPORTANT***/
+#important
+{
+	width: 1024px;
+	height: 80px;
+	display: flex;
+	flex-direction: row;
+}
+
+#important h1
+{
+	text-align: center;
+	font-size: 1.1em;
+	padding-top: 20px;
+}
+
+#important h3, #important h3 a
+{
+	font-family: 'Didot-Italic', serif;
+	text-align: center;
+	font-size: 0.9em;
+	color: #000;
+	padding-top: 5px;
+}
+
+#membership
+{
+	width: 50%;
+}
+
+
+#fundraising
+{
+	width: 50%;
+	background-color: #e0e0e0;
+}
+
+#important h3 a:hover
+{
+	text-decoration: underline;
+}
+
+/***MASTHEAD***/
+#masthead
+{
+	width: 1024px;
+	height: 354px;
+	background-image: url(../images/banner_contactUs.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#masthead div
+{
+	width: 520px;
+	height: 80px;
+	background-color: #91AEBF;
+	opacity: 0.8;
+	border-radius: 15px;
+	position: relative;
+	top: 240px;
+	left: 40px;
+}
+
+/***CONTACT DETAILS***/
+#contact
+{
+	display: flex;
+	flex-direction: row;
+}
+
+#contact-detail
+{
+	width: 512px;
+	margin: 30px;
+}
+
+#contact-detail h1
+{
+	font-size: 1.2em;
+	text-align: center;
+	padding: 40px 0 20px;
+}
+
+#contact-detail p
+{
+	width: 400px;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+
+/***CONTACT FORM***/
+#contact-form
+{
+	width: 512px;
+	background-color: #404040;
+	margin: 30px;
+}
+
+#contact-form h1
+{
+	font-size: 1.2em;
+	color: #FFD590;
+	text-align: center;
+	padding-top: 40px;
+}
+
+form div
+{
+	width: 350px;
+	margin: 20px auto;
+}
+
+form div label
+{
+	line-height: 1.5;
+	color: #f0f0f0;
+}
+
+form div input
+{
+	width: 350px;
+	font-size: 1em;
+}
+
+textarea
+{
+	width: 350px;
+	height: 75px;
+	font-size: 1em;
+}
+
+button
+{
+	font-size: 0.8em;
+	font-family: 'Didot', serif;
+	padding: 5px 20px;
+	background-color: #FFD590;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+button a
+{
+	color: #404040;
+}
+
+/***FOOTER***/
+#main-footer
+{
+	width: 1024px;
+	height: 330px;
+	background-color: #4D6064;
+}
+
+#suscribe
+{
+	text-align: center;
+	padding-top: 50px; 
+	color: white;
+}
+
+#suscribe input
+{
+	width: 500px;
+	padding: 10px 0 10px;
+	
+	background-color:rgba(0, 0, 0, 0);
+	color: white;
+	border-bottom: 1px solid white;
+	text-align: right; 
+}
+
+#footer-nav
+{
+	width: 500px;
+	margin: 50px auto;
+}
+
+#footer-nav ul
+{
+	width: 500px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#footer-nav ul li a
+{
+	color: white;
+}
+
+#footer-nav ul li a:hover
+{
+	color: #FFD590;
+}
+
+#footer-social
+{
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#footer-social object
+{
+	padding: 0 10px;
+}
+
+#main-footer h3
+{
+	width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 0.7em;
+	color: white;
+}
