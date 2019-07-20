@@ -35,6 +35,11 @@ main
 	left: 50px;
 }
 
+#main-head a
+{
+	cursor: pointer;
+}
+
 #main-nav
 {
     width: 910px;
