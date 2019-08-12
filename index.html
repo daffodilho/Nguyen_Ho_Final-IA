@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/home.css">
     
@@ -13,28 +15,39 @@
 <body>
 <main>
 	<header id="main-head">
+        <h1 class="hidden">Main Header</h1>
+
 		<div id="logo">
-    		<img src="images/logo_yellow.svg" alt="logo" width="105" height="95">
+    		<a href="index.html"><img src="images/logo_yellow.svg" alt="logo"></a><!--  width="105" height="95" -->
 	    </div>
           
-    	<nav id="main-nav">
-        	<div id="main-social">
+        <button id="nav-button">
+            <i class="fas fa-bars"></i>
+        </button>
+    	
+        <nav id="main-nav">
+            <div id="main-social">
         		<object><a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 311.38" width="30" height="30"><title>email white</title><path fill="#fff" d="M494.54,100H17.46A17.49,17.49,0,0,0,0,117.46V393.92a17.48,17.48,0,0,0,17.46,17.46H494.54A17.48,17.48,0,0,0,512,393.92V117.46A17.49,17.49,0,0,0,494.54,100ZM30,143l143.51,95.38L30,363.33ZM256,257.16,64.73,130H447.27Zm-56.52-1.52,46.85,31.15a17.42,17.42,0,0,0,19.34,0l46.85-31.15L456.93,381.35H55.07Zm139-17.23L482,143V363.33Z" transform="translate(0 -100)"/></svg></a></object>
             
 	            <object><a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.6 512" width="30" height="30"><title>facebook_white</title><path fill="#fff" d="M290,511H208a24.86,24.86,0,0,1-24.84-24.84V301.23H135.34a24.87,24.87,0,0,1-24.84-24.84V197.14a24.86,24.86,0,0,1,24.84-24.83h47.83V132.62c0-39.34,12.36-72.82,35.73-96.8S275.18-1,313.78-1l62.53.1A24.87,24.87,0,0,1,401.1,23.94V97.52a24.86,24.86,0,0,1-24.83,24.83l-42.1,0c-12.84,0-16.11,2.57-16.81,3.36-1.15,1.31-2.52,5-2.52,15.22V172.3h58.27a25.23,25.23,0,0,1,12.29,3.13,24.91,24.91,0,0,1,12.78,21.72l0,79.24a24.86,24.86,0,0,1-24.83,24.83H314.84V486.16A24.86,24.86,0,0,1,290,511Zm-76.81-30h71.63V287.79a16.6,16.6,0,0,1,16.58-16.58h66.73l0-68.89H301.4a16.6,16.6,0,0,1-16.58-16.58V141c0-11.72,1.19-25.06,10-35.08,10.7-12.12,27.55-13.52,39.3-13.52h36.93V29.11L313.75,29c-62,0-100.56,39.7-100.56,103.6v53.12a16.6,16.6,0,0,1-16.58,16.58H140.52v68.89h56.09a16.6,16.6,0,0,1,16.58,16.58ZM376.25,29.12Z" transform="translate(-110.5 1)"/></svg></a></object>
         	</div>
-        	<ul>
-           		<li><a href="index.html">Home</a></li>
-           		<li><a href="aboutUs.html">About us</a></li>
-           		<li><a href="highlights.html">Highlights</a></li>
-           		<li><a href="newsletters.html">Newletters</a></li>
-           		<li><a href="links.html">Links</a></li>
-           		<li><a href="contactUs.html">Contact us</a></li>
-        	</ul>
+
+            <div id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                    <li><a href="highlights.html">Highlights</a></li>
+                    <li><a href="newsletters.html">Newletters</a></li>
+                    <li><a href="links.html">Links</a></li>
+                    <li><a href="contactUs.html">Contact us</a></li>
+                </ul>
+            </div>
+        	
     	</nav>
-	</header>
+	</header><!-- end header section -->
        
     <div id="important">
+        <h1 class="hidden">Membership and Fundraising</h2>
        <div id="membership">
        		<h1>YEARLY MEMBERSHIP FOR ONLY $25</h1>
        		<h3><a href="#">See details</a></h3>
@@ -43,90 +56,103 @@
        		<h1>FUNDRAISING FOR TRAA PROGRAMS</h1>
        		<h3><a href="#">See details</a></h3>
        </div>
-    </div>
-       
-    <div id="hero-text"><h1>Dedication Today for Tomorrow<br>"For the enhancement, protection and promotion of a viable,<br> multi-species fishery within the Thames River watershed.</h1></div>
+    </div><!-- end important section -->
     
     <section id="masthead">
-    	<!--<div id="slider-button">
-    		<a href="#slide1">•</a>
-  			<a href="#slide2">•</a>
-  			<a href="#slide3">•</a>
-  			<a href="#slide4">•</a>
-    	</div>-->
-  		<div id="slider">
-    		<div class="slide bg1" id="slide1"></div>
-    		<div class="slide bg2" id="slide2"></div>
-    		<div class="slide bg3" id="slide3"></div>
-    	</div>
-    </section>
+        <h1 class="hidden">Banner Images</h2>
+        <div id="hero-text"><h1>Dedication Today for Tomorrow<br>"For the enhancement, protection and promotion of a viable, multi-species fishery within the Thames River watershed.</h1></div>
+    </section><!-- end banner image -->
        
     <section id="upcoming">
     	<h1 class="title">UPCOMING EVENTS</h1>
-    	<div id="event">
-    		<h1>Children's Water Festival</h1><br>
-			<h3><span>Fanshawe Conservation Area<br>May 16 - 17, 2019</span></h3>
-    	</div>
-    	<div id="event-img"><img src="images/upcomingEvent.jpg" alt="" width="516" height="280"></div>
-    	<div id="content">
-    		<p>The TRAA will be taking part in the "Public Night" portion of the event, Thursday, May 16 from 5:00pm to 8:00pm. It will likely be for kids to cast at fish targets which is as much fun for us as it is for the kids!
-			If you can come out and lend a hand please contact any of the Executive directly or <a href="contactUs.html">Contact Us</a> by email.
-			If you would like more general information about the Children's Water Festival <a href="#">Click Here.</a></p>
-    	</div>
-    	<button id="previous"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></a></button>
-    	
-    	<button id="next"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></a></button>
-    </section>
-       
+        <hr>
+        <div id="upcoming-con">
+            <button id="previous-event" class="fade"><i class="fas fa-chevron-left"></i></button>
+        	<div id="event">
+                <div id="event-con">
+                    <div class="event-detail">                
+                        <h1>Children's Water Festival<br>
+                        <span>May 16 - 17, 2019</span></h1>
+
+                        <div id="event-img">
+                            <img src="images/upcomingEvent.jpg" alt="upcomingEvent">
+                        </div>
+
+                        <div id="content">
+                		<p>The TRAA will be taking part in the "Public Night" portion of the event, Thursday, May 16 from 5:00pm to 8:00pm. It will likely be for kids to cast at fish targets which is as much fun for us as it is for the kids!
+            			If you can come out and lend a hand please contact any of the Executive directly or <a href="contactUs.html">Contact Us</a> by email.
+            			If you would like more general information about the Children's Water Festival <a href="#">Click Here.</a></p>
+                        </div> 
+                    </div>
+
+                    <div class="event-detail">                
+                        <h1>TRAA Fishing Evening<br>
+                        <span>August 8, 2019</span></h1>
+                        <!-- <h3>Fanshawe Conservation Area<br>May 16 - 17, 2019</h3> -->
+
+                        <div id="event-img">
+                            <img src="images/upcomingEvent2.jpg" alt="upcomingEvent2"><!-- width="516" height="280"-->
+                        </div>
+
+                        <div id="content">
+                        <p>We've been heading out to try our luck every Thursday evening in July and this will continue through August. The next location will be at the section that flows by the new Cedar Cove neighbourhood.<br>The start time is fluid as many people work but we shoot for 5:30pm. If you're delayed, just come when you're able.</p>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <button id="next-event"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section><!-- end upcoming events section -->
+
     <section id="products">
-    	<h1 class="title">PRODUCTS</h1>
-    	<div id="product-detail">
-    		<h2>TRAA Gear is now available!</h2>
-    		<div class="product-img">
-    			<img src="images/Merchandise/Tshirt.png" alt="t-shirt" height="220">
-    			<div class="caption"><h3>Steal Price of TRAA T-shirt<br>$15</h3></div>
+    	<h1 class="title">PRODUCTS</h1><hr>
+        <h3>TRAA Gear is now available!</h3>
+    	
+        <div id="product-con">
+            <button id="previous-product" class="disappear"><i class="fas fa-chevron-left"></i></button>
+            <div id="product-box">
+                <div id="product-list">
+                    <div class="product-detail">
+                        <img src="images/Merchandise/shirt.png" alt="t-shirt">
+                        <p class="caption">Steal price of TRAA t-shirt<br>$15</p>
+                    </div>
+                    <div class="product-detail">
+                        <img src="images/Merchandise/cap.png" alt="cap">
+                        <p class="caption">New hat colours available: Clay Grey, Burnt Orange, and Taupe.</p>
+                    </div>
+                    <div class="product-detail">
+                        <img src="images/Merchandise/sticky.png" alt="sticker">
+                        <p class="caption">New stickers at $2 or join TRAA membership to get 1 FREE.</p>
+                    </div>
+                </div>
     		</div>
-    		
-    		<div class="product-img">
-    			<img src="images/Merchandise/Cap.png" alt="cap" height="220">
-    			<div class="caption"><h3>New hat colours available:<br>Clay Grey, Burnt Orange and Taupe</h3></div>
-    		</div>
-    		
-    		<div class="product-img">
-    			<img src="images/Merchandise/Sticker.png" alt="sticker" height="220">
-    			<div class="caption"><h3>New stickers at $2<br> or join TRAA membership to get 1 free</h3></div>
-    		</div>
-		</div>
-    </section>
+            <button id="next-product" class="disappear"><i class="fas fa-chevron-right"></i></button>
+            <div id="ellipsis">
+                <i class="far fa-circle" data-offset="0"></i>
+                <i class="far fa-circle" data-offset="1"></i>
+                <i class="far fa-circle" data-offset="2"></i>
+            </div>
+        </div>
+    </section><!-- end product section -->
        
     <section id="sponsors">
-    	<h1 class="title">SPONSORS</h1>
-    	<div id="sponsor-detail">
-    		<div id="info">
-    			<h1>Special thanks to the support from our local businesses!</h1>
+    	<h1 class="title">SPONSORS</h1><hr>
 
-    			<div id="melchers"><h1>Over the past couple of years the folks at Melchers Construction Ltd have offered up their beautiful boardroom for TRAA executive meetings. It's an ideal space with all the amenities required for us to accomplish all the "behind the scenes" work of the TRAA. Many thanks go out to the continued support of Melchers Construction Ltd.</h1></div>
-    			
-    			<div id="guillevin"><h1>Members of the trout hatchery rotation know the woes we've had with lighting in the hatchery. Even with larger fixtures installed a few years ago, it was still frustrating on days when the mercury dipped below -15C and the fluorescent technology just teased us with its dull flicker. Enter Mike Jeffries of Guillevin Greentech in London with nice set of bright and dependable (and new!) LED fixtures. Once they were installed it was like working in well-appointed laboratory.</h1></div>
-    			
-    			<div id="muma"><h1>The TRAA voted unanimously to re-name the TRAA trout hatchery honouring Keith Wales' memory and his unselfish support of the TRAA's work in the London area, in particular Komoka Creek. Special thanks go out to Muma Manufacturing in St. Thomas for donating the beautiful laser-cut aluminum sign.</h1></div>
-    			
-    			<div id="try"><h1>After cleaning up the area around the TRAA shed and trout hatchery, our trailer was quite full and needed to be emptied. A big 'thank you' goes out to Rick Vandersluis and Mike Seabrook of Try Recycling who allowed the TRAA to empty the trailer at their facility free of charge.</h1></div>
-    			
-    			<div id="angling"><h1>Before we could take the trailer to Try Recycling, we needed to get the spare tire for the trailer fixed. Pat Devincenzo, proprietor of Angling Sports, offered to get it repaired. Turns out the tire needed replacing and Pat took care of it.
-				Angling Sports also supplied cards for all TRAA members that entitle them to a discount equal to the tax on anything in the store. Thanks Pat, your generosity is greatly appreciated.</h1></div>
-    		</div>
-    		<div id="company">
-    			<img src="images/Melchers.jpg" alt="" height="50" width="141">
-    			<img src="images/guillevin.jpg" alt="" height="50" width="205">
-    			<img src="images/muma.jpg" alt="" height="50" width="220">
-    			<img src="images/Try.jpg" alt="" height="50" width="123">
-    			<img src="images/AnglingSports.jpg" alt="" height="50" width="44" >
-    		</div>
+        <div id="sponsor-detail">
+            <div id="sponsor-img">
+                <img data-arrayref="1" src="images/melchers.png" alt="melchers">
+                <img data-arrayref="2" src="images/guillevin.png" alt="guillevin">
+                <img data-arrayref="3" src="images/muma.png" alt="muma">
+                <img data-arrayref="4" src="images/try.png" alt="try">
+                <img data-arrayref="5" src="images/angling.png" alt="angling">
+            </div>
+
+            <div id="sponsor-text"></div>
     	</div>
-    </section>
+    </section><!-- end sponsors section -->
 
     <footer id="main-footer">
+        <h1 class="hidden">Main Footer</h1>
     	<div id="suscribe">
     		<h1><span>Be the first to know</span></h1>
     		<input type="text" placeholder="Type your email">
@@ -151,11 +177,12 @@
     	
     	<h3>© 2019 Anglers All rights reserved.  Privacy Policy | Terms and Conditions</h3>
     	
-    </footer>
+    </footer><!-- end footer section -->
         
     </main>
     
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
 
