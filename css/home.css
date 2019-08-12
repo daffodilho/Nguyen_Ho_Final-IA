@@ -1,20 +1,18 @@
-/* MOBILE SIZE */
+/* ---------------MOBILE SIZE--------------- */
 body
 {
     font-family: 'Didot', serif;
 	font-size: 18px;
-	background-color: #f2f2f2;
 }
 
 main
 {
-	position: relative;
 	width: 100%;
 	background-color: #fff;
 	overflow: hidden;
 }
 
-/* Header - Mobile */
+/* MOBILE HEADER */
 #main-head
 {
 	width: 100%;
@@ -29,7 +27,7 @@ main
 #logo
 {
 	width: 40%;
-	padding: 0px 10px;
+	margin: 10px 10px;
 }
 
 #logo img
@@ -44,9 +42,21 @@ main
 	font-size: 40px;
 	color: #FDD590;
 	padding-right: 20px;
+	background-color: transparent;
+	border: none;
+	outline: none;
 }
 
-/* Navigation - Mobile */
+#nav-button i.expanded
+{
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+
+  transform: rotate(90deg);
+  transition: all .5s;
+}
+
+/* MOBILE NAVIGATION */
 #main-nav
 {
 	width: 100%;
@@ -57,31 +67,48 @@ main
 	display: none;
 }
 
+#main-nav.slideToggle
+{
+	display: flex;
+  	flex-direction: column;
+}
+
 #main-social
 {
 	order: 1;
 }
 
+#main-social object svg
+{
+	width: 25px;
+	height: 25px;
+}
+
 #nav-menu li
 {
 	padding: 15px;
-	font-size: 1.25em;
+	font-size: 1em;
 	order: -1;
-	border-top: 1px solid white;
+	border-top: 1px solid #f1f1f1;
 }
 
 #nav-menu li a
 {
-	color: #fff;
+	color: #f1f1f1;
 }
 
-/* Important - Mobile */
+/* MOBILE IMPORTANT */
 #important
 {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	font-size: 0.85em;
+	font-size: 0.8em;
+}
+
+#important h3 a:hover
+{
+	text-decoration: underline;
 }
 
 #membership, #fundraising
@@ -96,53 +123,97 @@ main
 	background-color: #e0e0e0;
 }
 
-/* Banner Image - Mobile */
+/* MOBILE BANNER IMAGE */
 #masthead
 {
 	width: 100%;
 	height: 200px;
 	background-image: url(../images/banner_home.jpg);
+	background-position: center;
+	background-size: cover;
 	background-repeat: no-repeat;
-  	background-position: center;
-  	background-size: cover;
-  	margin-bottom: 20px;
+	animation: slide 10s infinite alternate;
+}
+
+/* Animation for banner */
+@keyframes slide
+{
+	0% {background-image: url(../images/banner_home.jpg);}
+	50% {background-image: url(../images/banner_home2.jpg);}
+	100% {background-image: url(../images/banner_home3.jpg);}
+
 }
 
 #hero-text
 {
-	width: 80%;
-	background-color: rgba(255, 255, 255, 0.6);
-	margin: 0 auto;
-	padding: 10px;
-	font-size: 0.8em;
-	line-height: 1.125em;
+	font-size: 0.65em;
+	line-height: 1.25em;
+	color: #f1f1f1;
+	padding: 10px 60px 10px 10px;
 	position: relative;
-	top: 80px;
+	top: 120px;
 }
 
-/* Upcoming Events - Mobile */
+/* UPCOMING EVENTS - MOBILE */
 .title
 {
 	text-align: center;
 	margin: 60px 0 10px;
+	font-size: 1em;
 }
 
-hr
+#upcoming hr
 {
-	width: 50px;
+	width: 55%;
 	margin-bottom: 20px;
+}
+
+#upcoming-con
+{
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 #event
 {
-	width: 90%;
-	margin: 0 auto;
+	width: 80%;
 	overflow: hidden;
-	text-align: center;
+}
+
+#previous-event, #next-event, 
+#previous-product, #next-product
+{
+	width: 10%;
+	background-color: transparent;
+	border: none;
+	font-size: 1.5em;
+	cursor: pointer;
+	outline: 0;
+}
+
+#previous-event i, #next-event i,
+#previous-product i, #next-product i
+{
+	color: #4D6064;
+}
+
+#event-con
+{
+	width: 200%;
+	display: flex;
+	flex-flow: row nowrap;
+	position: relative;
+	right: 0;
+	transition: all .5s;
+}
+
+.event-detail
+{
+	width: 50%;
 	background-color: #F8EEDF;
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 30px;
 }
 
 #event-img
@@ -159,14 +230,10 @@ hr
 
 #event h1
 {
-	font-size: 1.5em;
+	font-size: 1em;
+	line-height: 1.5em;
 	padding-top: 30px;
-}
-
-#event h3
-{
-	font-size: 1.25em;
-	font-style: italic;
+	text-align: center;
 }
 
 #content
@@ -174,90 +241,141 @@ hr
 	width: 85%;
 	margin: 0 auto;
 	line-height: 1.5em;
-	font-size: 0.85em;
+	font-size: 0.65em;
 	padding-top: 20px;
+	padding-bottom: 30px;
 }
 
-#buttons
-{
-	display: none;
-}
-
-/* Products - Mobile */
+/* PRODUCTS - MOBILE */
 #products
 {
 	width: 100%;
-	margin: 0 auto;
+}
+
+#products hr, #sponsors hr
+{
+	width: 30%;
+	margin-bottom: 20px;
 }
 
 #products h3
 {
-	font-size: 1.25em;
+	font-size: 0.75em;
 	font-style: italic;
 	text-align: center;
-	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
-#product-detail
+#product-con
 {
-	width: 85%;
-	height: 85%;
-	margin: 0 auto;
-	border: 1px solid #404040;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#product-box
+{
+	width: 80%;
+	height: 100%;
 	overflow: hidden;
+	border: 1px solid #4D6064;
 }
 
-#product-img
+#product-list
 {
+	width: 300%;
+	height: 100%;
+	display: flex;
 	position: relative;
-	width: 900px;
 	right: 0;
+	transition: all .5s;
 }
 
-#product-img img
+.product-detail
 {
-	width: 30%;
-	height: 30%;
-	padding: 10px;
-	float: left;
+	width: 33.3%;
+	height: 100%;
+	text-align: center;
 }
 
-/* Sponsors - Mobile */
+.product-detail img
+{
+	width: 60%;
+	height: 60%;
+	margin-top: 0;
+}
+
+.caption
+{
+	font-size: 0.65em;
+	width: 100%;
+	background-color: rgba(77, 96, 100, 0.8);
+	padding: 100px 0;
+	color: #f1f1f1;
+	position: relative;
+	top: -200px;
+	margin-bottom: -400px;
+	display: none;
+}
+
+.product-detail:hover .caption
+{
+	display: block;
+}
+
+#ellipsis
+{
+	width: 100%;
+	text-align: center;
+	font-size: 0.45em;
+	margin-top: -20px;
+}
+
+#ellipsis i
+{
+	display: inline;
+	margin: 0 10px;
+	cursor: pointer;
+}
+
+/* SPONSORS - MOBILE */
 #sponsors
 {
-	margin-bottom: 30px;
+	width: 100%;
+	margin-bottom: 60px;
 }
 
 #sponsor-detail
 {
-	width: 90%;
+	width: 80%;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	margin: 0 auto;
 }
 
 #sponsor-img
 {
-	width: 20%;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
-	margin-left: 10px;
-	margin-right: 20px;
-	align-items: center;
+	margin-right: 10px;
 }
 
 #sponsor-img img
 {
-	padding-bottom: 20px;
+	width: 100%;
+	margin-bottom: 20px;
 }
 
 #sponsor-text
 {
 	background-color: #F8EEDF;
 	width: 70%;
+	font-size: 0.65em;
+	line-height: 1.5em;
+	padding: 20px;
 }
 
-/* Footer - Mobile */
+/* FOOTER - MOBILE */
 #main-footer
 {
 	width: 100%;
@@ -269,7 +387,7 @@ hr
 #suscribe
 {
 	padding-top: 30px;
-	font-size: 0.85em;
+	font-size: 0.75em;
 }
 
 input
@@ -278,8 +396,9 @@ input
 	width: 60%;
 	background: transparent;
 	border-bottom: 1px solid #FFF;
-	text-align: center;
+	text-align: right;
 	color: #FFF;
+	font-style: italic;
 }
 
 #footer-nav
@@ -287,33 +406,69 @@ input
 	display: none;
 }
 
-#footer-social
+#footer-social object svg
 {
+	width: 25px;
+	height: 25px;
 	padding-top: 30px;
-	font-size: 1.5em;
 }
 
 #main-footer h3
 {
 	padding: 30px 0;
-	font-size: 0.5em;
+	font-size: 0.45em;
 }
-
-/* DESKTOP SIZE */
-@media screen and (min-width: 600px)
+/* ---------------500PX WIDTH--------------- */
+@media screen and (min-width: 500px)
 {
-	main
+	#sponsors
 	{
-    	max-width: 1024px;
-		margin: 0 auto;
-		background-color: #fff;
+		width: 100%;
+		margin-bottom: 60px;
 	}
 
-	/* Header - Desktop */
+	#sponsor-detail
+	{
+		margin: 0 auto;
+		width: 85%;
+		flex-direction: column;
+	}
+
+	#sponsor-img
+	{
+		width: 100%;
+		flex-flow: row nowrap;
+		margin-right: 0;
+		justify-content: space-between;
+	}
+
+	#sponsor-img img
+	{
+		width: 18%;
+		height: 100%;
+		margin-bottom: 20px;
+	}
+
+	#sponsor-text
+	{
+		width: 100%;
+		height: 230px;
+		order: -2;
+		margin-top: 30px;
+		font-size: 0.9em;
+		padding: 15px 0;
+		text-align: center;
+	}
+}
+
+/* ---------------TABLET SIZE--------------- */
+@media screen and (min-width: 768px)
+{
+	/* HEADER - TABLET */
 	#main-head 
 	{
-		width: 1024px;
-		height: 124px;
+		width: 100%;
+		height: 150px;
     	display: flex;
     	flex-direction: row;
 		background-color: #4D6064;
@@ -321,12 +476,20 @@ input
 
 	#logo
 	{
-	    width: 105px;
-	    position: relative;
-	    top: 12px;
-		left: 50px;
+	    width: 10%;
+	    margin: 20px 0 10px 20px;
+	}
+
+	#logo img
+	{
+		width: 120px;
 	}
 	
+	#nav-button
+	{
+		display: none;
+	}
+
 	#main-head a
 	{
 		cursor: pointer;
@@ -334,23 +497,25 @@ input
 	
 	#main-nav
 	{
-	    width: 910px;
+	    width: 80%;
 	    display: flex;
 	    flex-direction: column;
 	    align-items: flex-end;
+	    margin-top: 20px;
 	}	
 
 	#main-social
 	{
-		position: relative;
-		top: 24px;
-		right: 50px;
+		order: -2;
+		padding: 20px 20px 10px 0;
 	}
 
-	#main-social object
+	#main-social object svg
 	{
-		padding-right: 10px;
+		width: 30px;
+		height: 30px;
 		transition: all 0.5s;
+		padding-left: 10px;
 	}
 
 	#main-social object svg path:hover
@@ -358,21 +523,23 @@ input
 		fill: #FDD590;
 	}
 
-	#main-nav ul
+	#nav-menu ul
 	{
 		display: flex;
 		flex-direction: row;
-		align-items: flex-end;
-		padding-right: 22px;
-		position: relative;
-		top: 50px;
+		padding-right: 10px;
 	}
 
-	#main-nav ul li a
+	#nav-menu li
 	{
-		font-size: 1em;
+		border-top: 0px;
+		font-size: 0.9em;
+	}
+
+	#nav-menu ul li a
+	{
 	    color: #f0f0f0;
-		margin-right: 38px;
+		margin-left: 0;
 		transition: all 0.5s;
 	}
 
@@ -381,11 +548,10 @@ input
 		color: #FFD590;
 	}
 
-	/***IMPORTANT***/
+	/* IMPORTANT TABLET */
 	#important
 	{
-		width: 1024px;
-		height: 80px;
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 	}
@@ -393,19 +559,18 @@ input
 	#important h1
 	{
 		text-align: center;
-		font-size: 1.1em;
-		padding-top: 20px;
+		font-size: 1em;
 	}
 
 	#important h3, #important h3 a
 	{
 		font-family: 'Didot-Italic', serif;
 		text-align: center;
-		font-size: 0.9em;
+		font-size: 1em;
 		color: #000;
-		padding-top: 5px;
+		margin-top: 5px;
 	}
-	
+
 	#important h3 a:hover
 	{
 		text-decoration: underline;
@@ -414,148 +579,120 @@ input
 	#membership
 	{
 		width: 50%;
+		border-bottom: none;
 	}
 
 	#fundraising
 	{
 		width: 50%;
 		background-color: #e0e0e0;
+		border-bottom: none;
 	}
 
-	/***MASTHEAD***/
+	/* MASTHEAD - TABLET */
 	#masthead
 	{
-		position: relative;
-		top: -60px;
-		margin-bottom: 40px;
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+	  	margin-bottom: 20px;
 	}
-	
-	#slider
-	{
-		width: 1024px;
-		height: 354px;
-		display: flex;
-		overflow-x: auto;
-		-webkit-scroll-behavior: smooth;
-		scroll-behavior: smooth;
-		-webkit-overflow-scrolling: auto;
-		scroll-snap-type: x mandatory;  
-	}
-
-	.slide
-	{
-		width: 1024px;
-		height: 100%;
-		flex-shrink: 0;
-		scroll-snap-align: start;
-	}
-
-	.bg1
-	{
-		background: url(../images/banner_home2.jpg) center center / cover no-repeat;
-	}
-
-	.bg2
-	{
-		background: url(../images/banner_home.jpg) center center / cover no-repeat;
-	}
-
-	.bg3
-	{
-		background: url(../images/banner_home3.jpg) center center / cover no-repeat;
-	}
-
-	/*button commented out for now*/
-	/*#slider-button 
-	{
-		font-size: 2em;
-		position: absolute;
-		top: 420px;
-		left: 250px;
-	}
-	
-	#slider-button a
-	{
-		color: white;
-		text-decoration: none;
-	}*/
 
 	#hero-text
 	{
+		width: 50%;
+		margin: 0 0 0 20px;
+		background-color: transparent;
+		padding: 10px;
+		font-size: 0.9em;
+		line-height: 1.25em;
 		position: relative;
-		top: 250px;
-		left: 50px;
-		z-index: 2;
+		top: 280px;
 	}
 
 	#hero-text h1
 	{
-		color: whitesmoke;
-		line-height: 20px;
+		color: #f1f1f1;
 	}
 
-
-	/***UPCOMING EVENTS***/
-	#upcoming
-	{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		margin-bottom: 40px;
-	}
-
+	/* UPCOMING EVENTS - TABLET */
 	.title
 	{
-		width: 2px;
-	    word-wrap: break-word;
-		font-family: monospace; 
-		white-space:pre-wrap;
-		
-		margin-left: 30px;
-		border: 1px solid gray;
-		padding: 30px;
-		padding-left: 20px;
+		width: 100%;
+		text-align: center;
+		margin: 100px 0 10px;
+		font-size: 1.5em;
 	}
 
-	#event-img
+	#upcoming hr, #products hr, #sponsors hr
 	{
-		width: 480px;
-		height: 280px;
-		overflow: hidden;
-		margin-right: 30px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	#upcoming-con
+	{
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
 	}
 
 	#event
 	{
-		width: 300px;
-		height: 280px;
+		width: 80%;
+	}
+	
+	#previous-event, #next-event
+	{
+		width: 10%;
+		font-size: 2em;
+	}
+
+	#event-con
+	{
+		width: 200%;
 		display: flex;
-		flex-direction: column;
+		flex-flow: row nowrap;
+	}
+
+	.event-detail
+	{
+		width: 50%;
+		background-color: transparent;
+		display: flex;
+		flex-direction: row;
 		flex-wrap: wrap;
-		padding: 0 50px;
-		margin-left: 30px;
-		text-align: center;
-		justify-content: center;
-		position: relative;
-		background-color: #f9f9f9;
+	}
+
+	#event-img
+	{
+		width: 62%;
+		order: 0;
+	}
+
+	#event-img img
+	{
+		width: 100%;
+		height: 100%;
 	}
 
 	#event h1
 	{
-		font-size: 2em;
+		width: 38%;
+		font-size: 1.25em;
+		line-height: 1.5em;
+		padding-top: 10%;
+		text-align: center;
 	}
 
 	#content
 	{
-		position: relative;
-		top: -22px;
-		width: 880px;
-		height: 100px;
-		background-color: antiquewhite;
-		margin: 0 30px 0 114px;
-		padding: 20px;
-		line-height: 1.5;
+		width: 100%;
+		margin: 10px auto 0;
+		line-height: 1.5em;
 		font-size: 0.9em;
+		padding: 50px;
+		background-color: #F8EEDF;
 	}
 
 	#content a
@@ -569,95 +706,524 @@ input
 		text-decoration: underline;
 	}
 
-	#previous
-	{
-		position: relative;
-		top: -350px;
-		left: 114px;
-		border: none;
-		padding: 10px;
-		margin: 0;
-		background-color: #f0f0f0;
-		opacity: 0.5;
-	}
 
-	#next
-	{
-		position: relative;
-		top: -350px;
-		left: 906px;
-		border: none;
-		padding: 10px;
-		margin: 0;
-		background-color: #f0f0f0;
-		opacity: 0.5;
-	}
-
-	/***PRODUCTS***/
+	/* PRODUCTS TABLET */
 	#products
+	{
+		width: 100%;
+	}
+
+	#products h3
+	{
+		font-size: 1em;
+		font-style: italic;
+		text-align: center;
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+
+	#product-con
+	{
+		width: 85%;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	#product-con button
+	{
+		display: none;
+	}
+
+	#product-box
+	{
+		width: 100%;
+		border: none;
+	}
+
+	#product-list
+	{
+		width: 100%;
+		display: flex;
+	}
+
+	.product-detail
+	{
+		width: 33.33%;
+		text-align: center;
+		overflow: hidden;
+		border: 1px solid #4D6064;
+		margin: 0 30px;
+	}
+
+	.product-detail img
+	{
+		width: 100%;
+		height: 100%;
+		margin: 10px 0;
+	}
+
+	.caption
+	{
+		font-size: 0.8em;
+		width: 100%;
+		background-color: rgba(77, 96, 100, 0.8);
+		padding: 120px 0;
+		color: #f1f1f1;
+		position: relative;
+		top: -260px;
+		margin-bottom: -270px;
+		display: none;
+	}
+
+	.product-detail:hover .caption
+	{
+		display: block;
+	}
+
+	#ellipsis
+	{
+		display: none;
+	}
+
+	/* SPONSORS - TABLET */
+	#sponsors
+	{
+		width: 100%;
+		margin-bottom: 60px;
+	}
+
+	#sponsor-detail
+	{
+		margin: 0 auto;
+		width: 85%;
+		flex-direction: column;
+	}
+
+	#sponsor-img
+	{
+		width: 100%;
+		flex-flow: row nowrap;
+		margin-right: 0;
+		justify-content: space-between;
+	}
+
+	#sponsor-img img
+	{
+		width: 18%;
+		height: 100%;
+		margin-bottom: 20px;
+	}
+
+	#sponsor-text
+	{
+		width: 100%;
+		height: 130px;
+		order: -2;
+		margin-top: 30px;
+		font-size: 0.9em;
+		padding: 15px 0;
+		text-align: center;
+	}
+
+	/* FOOTER - TABLET */
+	#main-footer
+	{
+		width: 100%;
+		height: 330px;
+		background-color: #4D6064;
+	}
+
+	#suscribe
+	{
+		text-align: center;
+		padding-top: 50px; 
+		color: white;
+		font-size: 1em;
+	}
+
+	#suscribe input
+	{
+		width: 500px;
+		padding: 10px 0 10px;
+		background-color: transparent;
+		color: white;
+		border-bottom: 1px solid white;
+		text-align: right; 
+	}
+
+	#footer-nav
+	{
+		width: 500px;
+		margin: 50px auto 0;
+		display: block;
+	}
+
+	#footer-nav ul
+	{
+		width: 500px;
+		display: inline-flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	#footer-nav ul li a
+	{
+		color: white;
+	}
+
+	#footer-nav ul li a:hover
+	{
+		color: #FFD590;
+	}
+
+	#footer-social
+	{
+		width: 200px;
+		margin: 0 auto;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	#footer-social object
+	{
+		padding: 0 10px;
+	}
+
+	#footer-social object svg path:hover
+	{
+		fill: #FDD590;
+	}
+
+	#main-footer h3
+	{
+		width: 100%;
+		color: white;
+		font-size: 0.7em;
+	}
+}
+
+/* ---------------DESKTOP SIZE--------------- */
+@media screen and (min-width: 1024px)
+{
+	/* Header - Desktop */
+	#main-head 
+	{
+		width: 100%;
+		height: 150px;
+    	display: flex;
+    	flex-direction: row;
+		background-color: #4D6064;
+	}
+
+	#logo
+	{
+	    width: 10%;
+	    margin: 20px 0 10px 20px;
+	}
+
+	#logo img
+	{
+		width: 120px;
+	}
+	
+	#nav-button
+	{
+		display: none;
+	}
+
+	#main-head a
+	{
+		cursor: pointer;
+	}
+	
+	#main-nav
+	{
+	    width: 80%;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: flex-end;
+	    margin-top: 20px;
+	}	
+
+	#main-social
+	{
+		order: -2;
+		padding: 20px 20px 10px 0;
+	}
+
+	#main-social object
+	{
+		transition: all 0.5s;
+		padding-left: 10px;
+	}
+
+	#main-social object svg path:hover
+	{
+		fill: #FDD590;
+	}
+
+	#nav-menu ul
 	{
 		display: flex;
 		flex-direction: row;
-		margin-bottom: 80px;
+		padding-right: 10px;
 	}
 
-	#product-detail
+	#nav-menu li
 	{
+		border-top: 0px;
+		font-size: 1.15em;
+	}
+
+	#nav-menu ul li a
+	{
+	    color: #f0f0f0;
+		margin-left: 20px;
+		transition: all 0.5s;
+	}
+
+	#main-nav ul li a:hover
+	{
+		color: #FFD590;
+	}
+
+	/* Important - Desktop */
+	#important
+	{
+		width: 100%;
+		height: 80px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	#important h1
+	{
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 10px;
+	}
+
+	#important h3, #important h3 a
+	{
+		font-family: 'Didot-Italic', serif;
+		text-align: center;
+		font-size: 1em;
+		color: #000;
+		margin-top: 5px;
+	}
+
+	#membership
+	{
+		width: 50%;
+		border-bottom: none;
+	}
+
+	#fundraising
+	{
+		width: 50%;
+		background-color: #e0e0e0;
+		border-bottom: none;
+	}
+
+	/* Masthead - Desktop */
+	#masthead
+	{
+		width: 100%;
+		height: 400px;
+		overflow: hidden;
+	}
+
+	/*#banner-con
+	{
+		width: 300%;
+		height: inherit;
+		display: flex;
+		flex-direction: row;
+	}
+
+	#banner-con img
+	{	
+		width: 100%;
+		float: left;
+	}*/
+
+	#hero-text
+	{
+		width: 40%;
+		margin: 0 0 0 60px;
+		background-color: transparent;
+		padding: 10px;
+		font-size: 1em;
+		line-height: 1.25em;
+		position: relative;
+		top: 250px;
+	}
+
+	#hero-text h1
+	{
+		color: #f1f1f1;
+	}
+
+	/* Upcoming Events - Desktop */
+	.title
+	{
+		width: 100%;
+		text-align: center;
+		margin: 100px 0 10px;
+		font-size: 1.75em;
+	}
+
+	hr
+	{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	#upcoming-con
+	{
+		width: 100%;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	#event
+	{
+		width: 80%;
+	}
+
+	#previous-event, #next-event
+	{
+		font-size: 2em;
+	}
+
+	#event-con
+	{
+		width: 200%;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	.event-detail
+	{
+		width: 50%;
+		background-color: transparent;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
-	#products h2
+	#event-img
 	{
-		width: 880px;
-		font-size: 1.5em;
-		margin: 0 0 10px 30px;
+		width: 62%;
+		order: 0;
 	}
 
-	.product-img
+	#event-img img
 	{
-		width: 85%;
-		height: 270px;
-		border: 1px solid gray;
-		margin-left: 30px;
-		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+
+	#event h1
+	{
+		width: 38%;
+		font-size: 1.75em;
+		line-height: 1.5em;
+		padding-top: 10%;
 		text-align: center;
 	}
 
-	.product-img img
+	#content
 	{
-		position: relative;
-		top: 30px;
+		width: 100%;
+		margin: 10px auto 0;
+		line-height: 1.5em;
+		font-size: 1em;
+		padding: 50px;
+		background-color: #F8EEDF;
 	}
 
-	.product-img:hover .caption
+	#content a
 	{
-		cursor: pointer;
-		opacity: 0.9;
+		color: black;
+		font-family: 'Didot-Italic';
+	}
+
+	#content a:hover
+	{
+		text-decoration: underline;
+	}
+
+
+	/* Products - Desktop */
+	#products
+	{
+		width: 100%;
+	}
+
+	#products h3
+	{
+		font-size: 1.25em;
+		font-style: italic;
+		text-align: center;
+		margin-bottom: 30px;
+		margin-top: 30px;
+	}
+
+	#product-con
+	{
+		width: 85%;
+		margin: 0 auto;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	#product-con button
+	{
+		display: none;
+	}
+
+	#product-box
+	{
+		width: 100%;
+		/*overflow: hidden;*/
+		border: none;
+	}
+
+	#product-list
+	{
+		width: 100%;
+		display: flex;
+	}
+
+	.product-detail
+	{
+		width: 33.33%;
+		height: 100%;
+		text-align: center;
+		border: 1px solid #4D6064;
+		margin: 0 30px;
+	}
+
+	.product-detail img
+	{
+		width: 100%;
+		height: 100%;
+		margin: 10px 0;
 	}
 
 	.caption
 	{
-		width: 270px;
-		height: 270px;
-		background-color: #4D6064;
-		position: relative;
-		left: 0px;
-		top: -223px;
-		opacity: 0;
-		transition: all .3s;
-		animation: zoom-out 1s infinite;
-	}
-
-	.caption h3
-	{
 		font-size: 1em;
-		line-height: 1.2;
+		width: 100%;
+		background-color: rgba(77, 96, 100, 0.8);
+		padding: 200px 0;
+		color: #f1f1f1;
 		position: relative;
-		top: 40px;
-		color: #fff;
-		padding: 40px;
+		top: -400px;
+		margin-bottom: -440px;
+		display: none;
 	}
 
 	/*CSS animation*/
@@ -667,57 +1233,50 @@ input
 		50% {transform: scale(0.9);}
 	}
 
-	/***SPONSORS***/
+	/* Sponsors - Desktop */
 	#sponsors
 	{
-		display: flex;
-		flex-direction: row;
-		margin-bottom: 80px;
+		width: 100%;
+		margin-bottom: 60px;
 	}
 
-	#info
+	#sponsor-detail
 	{
-		width: 880px;
-		height: 200px;
-		background-color: antiquewhite;
-		margin-left: 30px;
+		width: 80%;
+		margin: 0 auto;
+		flex-direction: column;
+	}
+
+	#sponsor-img
+	{
+		width: 100%;
+		margin: 0 auto;
+		flex-flow: row nowrap;
+		margin-right: 0;
+		justify-content: space-between;
+	}
+
+	#sponsor-img img
+	{
+		width: 18%;
+		height: 100%;
+		margin: 0 10px 20px;
+	}
+
+	#sponsor-text
+	{
+		width: 100%;
+		height: 160px;
+		order: -2;
+		margin-top: 30px;
+		font-size: 1em;
 		text-align: center;
 	}
 
-	#info h1
-	{
-		font-size: 1.2em;
-		position: relative;
-		top: 45%;
-	}
-
-	#company
-	{
-		margin: 20px 0 0 30px;
-	}
-
-	#company img
-	{
-		padding-right: 30px;
-	}
-
-	/*Hover for sponsors - to be used with javascript*/
-	#melchers, #guillevin, #muma, #try, #angling
-	{
-		width: 800px;
-		height: 160px;
-		font-size: 0.8em;
-		line-height: 1.3;
-		padding: 0 40px;
-		opacity: 0;
-		position: absolute;
-		top: 1700px;
-	}
-
-	/***FOOTER***/
+	/* Footer - Desktop */
 	#main-footer
 	{
-		width: 1024px;
+		width: 100%;
 		height: 330px;
 		background-color: #4D6064;
 	}
@@ -733,8 +1292,7 @@ input
 	{
 		width: 500px;
 		padding: 10px 0 10px;
-		
-		background-color:rgba(0, 0, 0, 0);
+		background-color: transparent;
 		color: white;
 		border-bottom: 1px solid white;
 		text-align: right; 
@@ -743,7 +1301,8 @@ input
 	#footer-nav
 	{
 		width: 500px;
-		margin: 50px auto;
+		margin: 50px auto 0;
+		display: block;
 	}
 
 	#footer-nav ul

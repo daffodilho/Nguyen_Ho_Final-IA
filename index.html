@@ -15,12 +15,14 @@
 <body>
 <main>
 	<header id="main-head">
+        <h1 class="hidden">Main Header</h1>
+
 		<div id="logo">
-    		<a href="index.html"><img src="images/logo_yellow.svg" alt="logo" width="105" height="95"></a>
+    		<a href="index.html"><img src="images/logo_yellow.svg" alt="logo"></a><!--  width="105" height="95" -->
 	    </div>
           
         <button id="nav-button">
-                <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
         </button>
     	
         <nav id="main-nav">
@@ -42,9 +44,10 @@
             </div>
         	
     	</nav>
-	</header>
+	</header><!-- end header section -->
        
     <div id="important">
+        <h1 class="hidden">Membership and Fundraising</h2>
        <div id="membership">
        		<h1>YEARLY MEMBERSHIP FOR ONLY $25</h1>
        		<h3><a href="#">See details</a></h3>
@@ -53,61 +56,83 @@
        		<h1>FUNDRAISING FOR TRAA PROGRAMS</h1>
        		<h3><a href="#">See details</a></h3>
        </div>
-    </div>
+    </div><!-- end important section -->
     
     <section id="masthead">
+        <h1 class="hidden">Banner Images</h2>
         <div id="hero-text"><h1>Dedication Today for Tomorrow<br>"For the enhancement, protection and promotion of a viable, multi-species fishery within the Thames River watershed.</h1></div>
-
-    	<!--<div id="slider-button">
-    		<a href="#slide1">•</a>
-  			<a href="#slide2">•</a>
-  			<a href="#slide3">•</a>
-  			<a href="#slide4">•</a>
-    	</div>-->
-  		<!-- <div id="slider">
-    		<div class="slide bg1" id="slide1"></div>
-    		<div class="slide bg2" id="slide2"></div>
-    		<div class="slide bg3" id="slide3"></div>
-    	</div> -->
-    </section>
+    </section><!-- end banner image -->
        
     <section id="upcoming">
     	<h1 class="title">UPCOMING EVENTS</h1>
         <hr>
-    	<div id="event">
-            <h1>Children's Water Festival</h1><br>
-			<h3><!-- Fanshawe Conservation Area<br> -->May 16 - 17, 2019</h3>
+        <div id="upcoming-con">
+            <button id="previous-event" class="fade"><i class="fas fa-chevron-left"></i></button>
+        	<div id="event">
+                <div id="event-con">
+                    <div class="event-detail">                
+                        <h1>Children's Water Festival<br>
+                        <span>May 16 - 17, 2019</span></h1>
 
-            <div id="event-img">
-                <img src="images/upcomingEvent.jpg" alt="" width="516" height="280">
-            </div>
+                        <div id="event-img">
+                            <img src="images/upcomingEvent.jpg" alt="upcomingEvent">
+                        </div>
 
-            <div id="content">
-    		<p>The TRAA will be taking part in the "Public Night" portion of the event, Thursday, May 16 from 5:00pm to 8:00pm. It will likely be for kids to cast at fish targets which is as much fun for us as it is for the kids!
-			If you can come out and lend a hand please contact any of the Executive directly or <a href="contactUs.html">Contact Us</a> by email.
-			If you would like more general information about the Children's Water Festival <a href="#">Click Here.</a></p>
+                        <div id="content">
+                		<p>The TRAA will be taking part in the "Public Night" portion of the event, Thursday, May 16 from 5:00pm to 8:00pm. It will likely be for kids to cast at fish targets which is as much fun for us as it is for the kids!
+            			If you can come out and lend a hand please contact any of the Executive directly or <a href="contactUs.html">Contact Us</a> by email.
+            			If you would like more general information about the Children's Water Festival <a href="#">Click Here.</a></p>
+                        </div> 
+                    </div>
+
+                    <div class="event-detail">                
+                        <h1>TRAA Fishing Evening<br>
+                        <span>August 8, 2019</span></h1>
+                        <!-- <h3>Fanshawe Conservation Area<br>May 16 - 17, 2019</h3> -->
+
+                        <div id="event-img">
+                            <img src="images/upcomingEvent2.jpg" alt="upcomingEvent2"><!-- width="516" height="280"-->
+                        </div>
+
+                        <div id="content">
+                        <p>We've been heading out to try our luck every Thursday evening in July and this will continue through August. The next location will be at the section that flows by the new Cedar Cove neighbourhood.<br>The start time is fluid as many people work but we shoot for 5:30pm. If you're delayed, just come when you're able.</p>
+                        </div> 
+                    </div>
+                </div>
             </div>
-            
-            <div id="buttons">
-                <button id="previous"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></a></button>
-        
-                <button id="next"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></a></button>
-            </div>
-            
+            <button id="next-event"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section><!-- end upcoming events section -->
-       
+
     <section id="products">
     	<h1 class="title">PRODUCTS</h1><hr>
         <h3>TRAA Gear is now available!</h3>
     	
-        <div id="product-detail">	
-    		<div id="product-img" style="right: 0">
-    			<img src="images/Merchandise/Tshirt.png" alt="t-shirt" height=300>
-    			<img src="images/Merchandise/Cap.png" alt="cap" height=300>
-    			<img src="images/Merchandise/Sticker.png" alt="sticker" height=300>
+        <div id="product-con">
+            <button id="previous-product" class="disappear"><i class="fas fa-chevron-left"></i></button>
+            <div id="product-box">
+                <div id="product-list">
+                    <div class="product-detail">
+                        <img src="images/Merchandise/shirt.png" alt="t-shirt">
+                        <p class="caption">Steal price of TRAA t-shirt<br>$15</p>
+                    </div>
+                    <div class="product-detail">
+                        <img src="images/Merchandise/cap.png" alt="cap">
+                        <p class="caption">New hat colours available: Clay Grey, Burnt Orange, and Taupe.</p>
+                    </div>
+                    <div class="product-detail">
+                        <img src="images/Merchandise/sticky.png" alt="sticker">
+                        <p class="caption">New stickers at $2 or join TRAA membership to get 1 FREE.</p>
+                    </div>
+                </div>
     		</div>
-		</div>
+            <button id="next-product" class="disappear"><i class="fas fa-chevron-right"></i></button>
+            <div id="ellipsis">
+                <i class="far fa-circle" data-offset="0"></i>
+                <i class="far fa-circle" data-offset="1"></i>
+                <i class="far fa-circle" data-offset="2"></i>
+            </div>
+        </div>
     </section><!-- end product section -->
        
     <section id="sponsors">
@@ -115,18 +140,19 @@
 
         <div id="sponsor-detail">
             <div id="sponsor-img">
-                <img src="images/Melchers.jpg" alt="melchers" width="80">
-                <img src="images/guillevin.jpg" alt="guillevin" width="80">
-                <img src="images/muma.jpg" alt="muma" width="80">
-                <img src="images/Try.jpg" alt="try" width="80">
-                <img src="images/AnglingSports.jpg" alt="angling" width="40">
+                <img data-arrayref="1" src="images/melchers.png" alt="melchers">
+                <img data-arrayref="2" src="images/guillevin.png" alt="guillevin">
+                <img data-arrayref="3" src="images/muma.png" alt="muma">
+                <img data-arrayref="4" src="images/try.png" alt="try">
+                <img data-arrayref="5" src="images/angling.png" alt="angling">
             </div>
 
             <div id="sponsor-text"></div>
     	</div>
-    </section>
+    </section><!-- end sponsors section -->
 
     <footer id="main-footer">
+        <h1 class="hidden">Main Footer</h1>
     	<div id="suscribe">
     		<h1><span>Be the first to know</span></h1>
     		<input type="text" placeholder="Type your email">
@@ -144,20 +170,19 @@
     	</nav>
     	
     	<div id="footer-social">
-            <i class="far fa-envelope"></i>
-            <i class="fab fa-facebook-square"></i>
-    		<!-- <object><a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 311.38" width="40" height="40"><title>email white</title><path fill="#fff" d="M494.54,100H17.46A17.49,17.49,0,0,0,0,117.46V393.92a17.48,17.48,0,0,0,17.46,17.46H494.54A17.48,17.48,0,0,0,512,393.92V117.46A17.49,17.49,0,0,0,494.54,100ZM30,143l143.51,95.38L30,363.33ZM256,257.16,64.73,130H447.27Zm-56.52-1.52,46.85,31.15a17.42,17.42,0,0,0,19.34,0l46.85-31.15L456.93,381.35H55.07Zm139-17.23L482,143V363.33Z" transform="translate(0 -100)"/></svg></a></object> -->
+    		<object><a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 311.38" width="40" height="40"><title>email white</title><path fill="#fff" d="M494.54,100H17.46A17.49,17.49,0,0,0,0,117.46V393.92a17.48,17.48,0,0,0,17.46,17.46H494.54A17.48,17.48,0,0,0,512,393.92V117.46A17.49,17.49,0,0,0,494.54,100ZM30,143l143.51,95.38L30,363.33ZM256,257.16,64.73,130H447.27Zm-56.52-1.52,46.85,31.15a17.42,17.42,0,0,0,19.34,0l46.85-31.15L456.93,381.35H55.07Zm139-17.23L482,143V363.33Z" transform="translate(0 -100)"/></svg></a></object>
             
-	        <!-- <object><a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.6 512" width="40" height="40"><title>facebook_white</title><path fill="#fff" d="M290,511H208a24.86,24.86,0,0,1-24.84-24.84V301.23H135.34a24.87,24.87,0,0,1-24.84-24.84V197.14a24.86,24.86,0,0,1,24.84-24.83h47.83V132.62c0-39.34,12.36-72.82,35.73-96.8S275.18-1,313.78-1l62.53.1A24.87,24.87,0,0,1,401.1,23.94V97.52a24.86,24.86,0,0,1-24.83,24.83l-42.1,0c-12.84,0-16.11,2.57-16.81,3.36-1.15,1.31-2.52,5-2.52,15.22V172.3h58.27a25.23,25.23,0,0,1,12.29,3.13,24.91,24.91,0,0,1,12.78,21.72l0,79.24a24.86,24.86,0,0,1-24.83,24.83H314.84V486.16A24.86,24.86,0,0,1,290,511Zm-76.81-30h71.63V287.79a16.6,16.6,0,0,1,16.58-16.58h66.73l0-68.89H301.4a16.6,16.6,0,0,1-16.58-16.58V141c0-11.72,1.19-25.06,10-35.08,10.7-12.12,27.55-13.52,39.3-13.52h36.93V29.11L313.75,29c-62,0-100.56,39.7-100.56,103.6v53.12a16.6,16.6,0,0,1-16.58,16.58H140.52v68.89h56.09a16.6,16.6,0,0,1,16.58,16.58ZM376.25,29.12Z" transform="translate(-110.5 1)"/></svg></a></object> -->
+	        <object><a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290.6 512" width="40" height="40"><title>facebook_white</title><path fill="#fff" d="M290,511H208a24.86,24.86,0,0,1-24.84-24.84V301.23H135.34a24.87,24.87,0,0,1-24.84-24.84V197.14a24.86,24.86,0,0,1,24.84-24.83h47.83V132.62c0-39.34,12.36-72.82,35.73-96.8S275.18-1,313.78-1l62.53.1A24.87,24.87,0,0,1,401.1,23.94V97.52a24.86,24.86,0,0,1-24.83,24.83l-42.1,0c-12.84,0-16.11,2.57-16.81,3.36-1.15,1.31-2.52,5-2.52,15.22V172.3h58.27a25.23,25.23,0,0,1,12.29,3.13,24.91,24.91,0,0,1,12.78,21.72l0,79.24a24.86,24.86,0,0,1-24.83,24.83H314.84V486.16A24.86,24.86,0,0,1,290,511Zm-76.81-30h71.63V287.79a16.6,16.6,0,0,1,16.58-16.58h66.73l0-68.89H301.4a16.6,16.6,0,0,1-16.58-16.58V141c0-11.72,1.19-25.06,10-35.08,10.7-12.12,27.55-13.52,39.3-13.52h36.93V29.11L313.75,29c-62,0-100.56,39.7-100.56,103.6v53.12a16.6,16.6,0,0,1-16.58,16.58H140.52v68.89h56.09a16.6,16.6,0,0,1,16.58,16.58ZM376.25,29.12Z" transform="translate(-110.5 1)"/></svg></a></object>
     	</div>
     	
     	<h3>© 2019 Anglers All rights reserved.  Privacy Policy | Terms and Conditions</h3>
     	
-    </footer>
+    </footer><!-- end footer section -->
         
     </main>
     
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
 
