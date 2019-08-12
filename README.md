@@ -1,4 +1,4 @@
-![TRAA logo](images/ori-logo.png)
+![TRAA logo](images/ori-logo.jpg)
 
 # TRAA Website
 
